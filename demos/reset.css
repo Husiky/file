@@ -1,0 +1,37 @@
+html,body{
+    width:100%;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+ul,li,ol{
+    list-style: none;
+}
+input,button{
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.flex-x{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.flex-y{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.lf{
+    float: left;
+}
+.rt{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+
+

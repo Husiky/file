@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>布局</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        h2{
+            text-align: center;
+            margin-top:30px;
+        }
+        ul{
+            border:1px solid #00d;
+            height:100px;
+            display: flex;
+        }
+        li{
+            border:1px dashed #ccc;
+            flex-basis: 200px;
+        }
+        #autoWidth{
+            flex: 1;
+            overflow-x:auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- flex -->
+    <h2>flex</h2>
+    <ul>
+        <li class='fixWidth'></li>
+        <li id='autoWidth'>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum tempora unde dignissimos ipsam inventore ducimus omnis quidem dolorem quam. Dignissimos animi doloribus maxime nam voluptates aliquam? Itaque necessitatibus numquam quis?    
+        </li>
+        <li class='fixWidth'></li>
+    </ul>
+
+    <!-- 浮动 -->
+    <h2>浮动</h2>
+    <section>
+        <style>
+            section{
+                min-height:100px;
+            }
+            section:after{
+                content:'';
+                display: block;
+                clear: both;
+            }
+            aside{
+                height: 100%;
+                height: 100px;
+                background: #ddd;
+                width:200px;
+            }
+            article{
+                height: 100px;
+                background: #bbb;
+            }
+            article p{
+                height:100%;
+                overflow-y: scroll;
+            }
+
+        </style>
+        <aside class='lf '>浮动：左</aside>
+        <aside class='rt '>浮动：右</aside>
+        <article>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum tempora unde dignissimos ipsam inventore ducimus omnis quidem dolorem quam. Dignissimos animi doloribus maxime nam voluptates aliquam? Itaque necessitatibus numquam quis?    
+            </p>
+        </article>  
+    </section>
+
+    <!-- 定位 -->
+    <h2>定位</h2>
+    <div id="box">
+        <style>
+            #box{
+                border: 1px solid #f00;
+                height:100px;
+                position: relative;
+            }    
+            #box div{
+                height:100%;
+                position: absolute;
+                top:0;
+            }
+            .pos{
+                background: #555;
+                width:200px;
+            }
+            .p1{
+                left:0;
+            }
+            .p2{
+                right:0;
+            }
+            .center{
+                left:200px;
+                right:200px;
+                background: #f1f1f1;
+                overflow-y: scroll;
+            }
+        </style>
+        <div class="pos p1">1</div>
+        <div class="center">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum tempora unde dignissimos ipsam inventore ducimus omnis quidem dolorem quam. Dignissimos animi doloribus maxime nam voluptates aliquam? Itaque necessitatibus numquam quis?
+        </div>
+        <div class="pos p2">3</div>
+    </div>
+</body>
+</html>
