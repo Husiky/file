@@ -13,7 +13,6 @@
         }
         ul{
             border:1px solid #00d;
-            height:100px;
             display: flex;
         }
         li{
@@ -22,7 +21,6 @@
         }
         #autoWidth{
             flex: 1;
-            overflow-x:auto;
         }
     </style>
 </head>
@@ -33,6 +31,8 @@
         <li class='fixWidth'></li>
         <li id='autoWidth'>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum tempora unde dignissimos ipsam inventore ducimus omnis quidem dolorem quam. Dignissimos animi doloribus maxime nam voluptates aliquam? Itaque necessitatibus numquam quis?    
+            <p>撑开内容</p>
+            <p>撑开内容</p>
         </li>
         <li class='fixWidth'></li>
     </ul>
@@ -51,26 +51,25 @@
             }
             aside{
                 height: 100%;
-                height: 100px;
                 background: #ddd;
                 width:200px;
             }
             article{
-                height: 100px;
                 background: #bbb;
             }
             article p{
                 height:100%;
-                overflow-y: scroll;
             }
 
         </style>
-        <aside class='lf '>浮动：左</aside>
-        <aside class='rt '>浮动：右</aside>
-        <article>
+        <aside class='lf clear'>浮动：左</aside>
+        <aside class='rt clear'>浮动：右</aside>
+        <article class=''>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum tempora unde dignissimos ipsam inventore ducimus omnis quidem dolorem quam. Dignissimos animi doloribus maxime nam voluptates aliquam? Itaque necessitatibus numquam quis?    
             </p>
+            <p>撑开内容</p>
+            <p>撑开内容</p>
         </article>  
     </section>
 
@@ -80,7 +79,6 @@
         <style>
             #box{
                 border: 1px solid #f00;
-                height:100px;
                 position: relative;
             }    
             #box div{
@@ -102,14 +100,66 @@
                 left:200px;
                 right:200px;
                 background: #f1f1f1;
-                overflow-y: scroll;
+                /* overflow-y: scroll; */
             }
         </style>
         <div class="pos p1">1</div>
         <div class="center">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum tempora unde dignissimos ipsam inventore ducimus omnis quidem dolorem quam. Dignissimos animi doloribus maxime nam voluptates aliquam? Itaque necessitatibus numquam quis?
-        </div>
+                <p>撑开内容</p>
+                <p>撑开内容</p>
+            </div>
         <div class="pos p2">3</div>
+    </div>
+
+    <!-- 表格 -->
+    <h2>table</h2>
+    <div id="table">
+        <style>
+            #table{
+                display: table;
+                width:100%;
+            }
+            #table div{
+                display: table-cell;
+            }
+            .cell{
+                width:200px;
+                background: black;
+            }
+            .center{
+                background: purple;
+            }
+        </style>
+        <div class="cell"></div>
+        <div class="center">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum tempora unde dignissimos ipsam inventore ducimus omnis quidem dolorem quam. Dignissimos animi doloribus maxime nam voluptates aliquam? Itaque necessitatibus numquam quis?
+                <p>撑开内容</p>
+                <p>撑开内容</p>
+            </div>
+        <div class="cell"></div>
+    </div>
+
+    <h2>grid布局</h2>
+    <div id="grid">
+        <style>
+            #grid{
+                display: grid;
+                grid-template-columns: 200px auto 200px;
+                grid-template-rows: 100px;
+                margin-bottom: 100px;
+            }
+            #grid div{
+                border: 1px solid #f00;
+            }
+        </style>
+        <div>1</div>
+        <div>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum tempora unde dignissimos ipsam inventore ducimus omnis quidem dolorem quam. Dignissimos animi doloribus maxime nam voluptates aliquam? Itaque necessitatibus numquam quis?
+            <p>撑开内容</p>
+            <p>撑开内容</p>
+        </div>
+        <div>3</div>
     </div>
 </body>
 </html>
