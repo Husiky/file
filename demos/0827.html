@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+        <div id="col">
+                <style>
+                    html,body{
+                        height:100%;
+                    }
+                    #col{
+                        display: flex;
+                        flex-direction: column;
+                        height:100%;
+                        background: #eee;
+                    }    
+                    #col div{
+                        border: 1px solid #f00;
+                    }
+                    .col-aside{
+                        height:100px;
+                    }
+                    .col-center{
+                        flex:1;
+                    }
+                </style>
+                <div class="col-aside"></div>
+                <div class="col-center"></div>
+                <div class="col-aside"></div>
+            </div>
+</body>
+</html>

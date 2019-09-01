@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        p{
+            /* line-height: 30px; */
+            border:1px solid #f00;
+            width:500px;
+        }
+        img{
+           display: inline-block;
+           margin: 0;
+           border: 0;
+           vertical-align: middle; 
+        }
+        section{
+            /* border:1px dashed #00f; */
+        }
+        article.a1{
+            height:100px;
+            background: #0ff;
+            margin-top:30px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <p id='box1'> 
+        <span>flex布局</span> 
+        <!-- <a href=""> -->
+            <img src="imgs/1.jpg" width="40px" alt="">
+        <!-- </a> -->
+    </p>
+    <section>
+        <article class='a1'>child</article> 
+    </section>
+   <section>
+       <style>
+       .lf{
+           width:200px;
+           height:100px;
+           background: #00f;
+       }
+       .rt{
+           float: none;
+           height: 120px;
+           background: #ddd;
+           overflow: auto;
+       }
+       </style>
+       <article>
+           <div class="lf">左侧</div>
+           <div class="rt">右侧</div>
+       </article>
+   </section>
+    <script>
+        var box1=document.querySelector("#box1");
+        var w=window.getComputedStyle(box1).width; //兼容性较好，比较推荐；dom.style.width只能获取到内联样式宽度
+        console.log(w)
+    </script>
+</body>
+
+</html>
